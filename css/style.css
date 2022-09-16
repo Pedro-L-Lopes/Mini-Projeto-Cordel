@@ -1,82 +1,104 @@
-*{
-    margin: 0%;
-    padding: 0%;
-}
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root{
-    --cor1: black;
-    --cor2: white;
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
 
-    --fonteh1: 'Passion One', cursive;
-    --fontep: 'Sriracha', cursive;
-    --fonterodape: verdana, cursive;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    min-height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: var(--fonte1);
 }
 
 a{
+    color: white;
     text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 header{
+    background-color: black;
+    color: white;
     text-align: center;
-    background: var(--cor1);
-    color: var(--cor2);
 }
 
 header > h1{
-    font-family: var(--fonterodape);
-    font-size: 6vw;
-    padding-top: 10vh;
-    padding-bottom: 10px;
+    padding-top: 50px;
+    font-variant: small-caps;
+    /*Jogar todas as letras para maiscula --> text-transform: uppercase;*/
+    font-family: var(--fonte2);
+    font-size: 10vw;
 }
 
 header > p{
+    padding-bottom: 50px;
+}
+
+section{
+    padding-top: 10vh;
     padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
-#linkp{
-    color: white;
-    font-size: 1.5vw;
-    font-weight: bolder;
-   
+section > p{
+    padding-bottom: 2em;
 }
 
-main{
-
-}
-.para{
-    font-family: var(--fontep);
-    font-size: 9vh;
- 
-    margin-top: 5vw;
-    margin-left: 2vw;
+section.normal{
+    background-color: white;
+    color: black;
 }
 
-#pr1{
+section.imagem{
+    background-color: rgb(137, 204, 21);
+    color: rgb(255, 255, 255);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.524);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.506);
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+#img01{
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 105vh;
 }
 
-.fundo{
-
-}
-
-#pr2{
+#img02{
     background-image: url(../imagens/background002.jpg);
     background-position: right center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 95vh;
 }
 
 
 
 
 
-
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
